@@ -1,4 +1,4 @@
-name: retack
+name: retack_pkg
 description: Flutter SDK to handle API calls to retack.ai for posting exceptions & errors 
 version: 0.0.1
 homepage: https://retack.ai

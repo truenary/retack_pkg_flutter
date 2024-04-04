@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import 'package:retack/retack.dart';
+import 'package:retack_pkg/retack.dart';
 
 void main() {
   test('Test Retack AI fails with Invalid Key', () async {
