@@ -39,3 +39,4 @@ try {
 ## Additional information
 
 Learn more: [Retack.AI](https://retack.ai)
+Retack.AI is powere by [Truenary](https://truenary.com)
