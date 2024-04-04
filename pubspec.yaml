@@ -1,7 +1,16 @@
 name: retack
 description: Flutter SDK to handle API calls to retack.ai for posting exceptions & errors 
-version: 0.0.1
+version: 0.0.2
 homepage: https://retack.ai
+
+# This package supports all platforms listed below.
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
