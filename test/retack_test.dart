@@ -10,7 +10,11 @@ void main() {
     try {
       throw const FormatException('Format Exception');
     } catch (_, __) {
-      final bool resp = await client.reportError(_.toString(), __);
+      final bool resp = await client.reportError(
+        _.toString(),
+        __,
+        userContext: UserContext(userName: 'user@retack.io'),
+      );
       expect(resp, false);
     }
   });

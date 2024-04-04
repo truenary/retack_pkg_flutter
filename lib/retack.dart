@@ -22,6 +22,14 @@ class UserContext {
     this.userName,
     this.extras,
   });
+
+  // Method to convert UserContext to a JSON-encodable map
+  Map<String, dynamic> toJson() {
+    return {
+      'userName': userName,
+      'extras': extras,
+    };
+  }
 }
 
 class RetackClient {
@@ -49,7 +57,7 @@ class RetackClient {
     var body = <String, dynamic>{
       "title": error,
       "stack_trace": stackTrace.toString(),
-      "user_context": userContext
+      "user_context": userContext?.toJson(),
     };
 
     final http.Response response = await http.post(
