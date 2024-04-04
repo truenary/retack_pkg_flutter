@@ -1,3 +1,5 @@
+## 0.0.3
+* Added repository url
 ## 0.0.2
 * Added supported platforms
 ## 0.0.1
