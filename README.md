@@ -1,7 +1,9 @@
 A Dart package to report application errors & exceptions to Retack.AI for Flutter and Dart applications.
 
 ## What is Retack AI?
-Retack AI is a new generation Application error monitoring and tracking platform which not only helps you monitor errors wherever they occur but also has an advanced AI support to instantly fix your code repository.
+Retack AI is a new generation Application error monitoring and tracking platform which not only helps you monitor errors wherever they occur but also has an advanced AI support to instantly fix your code repository. 
+
+Learn more: [Retack.AI](https://retack.ai)
 
 ## Getting started
 
@@ -37,6 +39,4 @@ try {
 ```
 
 ## Additional information
-
-Learn more: [Retack.AI](https://retack.ai)
-Retack.AI is powere by [Truenary](https://truenary.com)
+Retack.AI is powered by [Truenary](https://truenary.com)

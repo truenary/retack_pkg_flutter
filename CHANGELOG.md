@@ -1,3 +1,5 @@
+## 0.0.4
+* Improved Readme.MD
 ## 0.0.3
 * Added repository url
 ## 0.0.2
