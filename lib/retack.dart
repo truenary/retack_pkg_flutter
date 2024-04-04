@@ -1,4 +1,4 @@
-library retack_pkg;
+library retack;
 
 import 'dart:convert';
 import 'package:http/http.dart' as http;
