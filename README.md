@@ -1,39 +1,41 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+A Dart package to report application errors & exceptions to Retack.AI for Flutter and Dart applications.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## What is Retack AI?
+Retack AI is a new generation Application error monitoring and tracking platform which not only helps you monitor errors wherever they occur but also has an advanced AI support to instantly fix your code repository.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Start by creating an instance of `RetackClient` class by providing your `YOUR_API_KEY`.
 
 ```dart
-const like = 'sample';
+final RetackConfig retackConfig = RetackConfig('YOUR_API_KEY');
+final RetackClient retackClient = RetackClient(retackConfig);
+```
+
+You can now make use of `reportError` function to report errors wherever they occur in your application
+
+You can also pass `UserContext` as additional optional parameter to send further info about current error and affected `User`.
+
+## Usage Example
+Here's a sample example for reference:
+
+```dart
+
+final String falseApiKey = 'YOUR_API_KEY';
+final RetackClient client = RetackClient(RetackConfig(falseApiKey));
+
+try {
+    throw const FormatException('Format Exception');
+} catch (_, __) {
+    final bool resp = await client.reportError(
+        _.toString(),
+        __,
+        userContext: UserContext(userName: 'user@retack.io'),
+    );
+}
+  
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Learn more: [Retack.AI](https://retack.ai)
