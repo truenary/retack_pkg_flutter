@@ -3,7 +3,7 @@ library retack;
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-const String retackApiBaseUrl = 'api.dev.retack.ai';
+const String retackApiBaseUrl = 'api.retack.ai';
 const String retackApiEndpoint = '/observe/error-log/';
 
 class RetackConfig {
