@@ -1,4 +1,6 @@
 ## 0.0.5
+* Added API urls as parameters
+## 0.0.5
 * Updated API url for Retack AI
 ## 0.0.4
 * Improved Readme.MD

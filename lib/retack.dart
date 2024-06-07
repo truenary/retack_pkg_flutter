@@ -3,14 +3,17 @@ library retack;
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-const String retackApiBaseUrl = 'api.retack.ai';
-const String retackApiEndpoint = '/observe/error-log/';
-
 /// Configuration for the RetackClient.
 class RetackConfig {
   final String apiKey;
+  final String baseUrl;
+  final String apiEndpoint;
 
-  RetackConfig(this.apiKey);
+  RetackConfig(
+    this.apiKey, {
+    this.baseUrl = 'api.retack.ai',
+    this.apiEndpoint = '/observe/error-log/',
+  });
 }
 
 /// Additional context about the user.
@@ -71,7 +74,7 @@ class RetackClient {
     };
 
     final http.Response response = await http.post(
-      Uri.https(retackApiBaseUrl, retackApiEndpoint),
+      Uri.https(_retackConfig.baseUrl, _retackConfig.apiEndpoint),
       headers: headers,
       body: jsonEncode(body),
     );
