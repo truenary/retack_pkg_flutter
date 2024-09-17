@@ -4,8 +4,8 @@ import 'package:retack/retack.dart';
 
 void main() {
   test('Test Retack AI fails with Invalid Key', () async {
-    final String falseApiKey = 'CMskbtq_xDA46XAkAzQe1JEY12';
-    final RetackClient client = RetackClient(RetackConfig(falseApiKey));
+    final String falseenvKey = 'CMskbtq_xDA46XAkAzQe1JEY12';
+    final RetackClient client = RetackClient(RetackConfig(falseenvKey));
 
     try {
       throw const FormatException('Format Exception');

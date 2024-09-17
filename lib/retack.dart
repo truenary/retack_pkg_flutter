@@ -5,12 +5,12 @@ import 'package:http/http.dart' as http;
 
 /// Configuration for the RetackClient.
 class RetackConfig {
-  final String apiKey;
+  final String envKey;
   final String baseUrl;
   final String apiEndpoint;
 
   RetackConfig(
-    this.apiKey, {
+    this.envKey, {
     this.baseUrl = 'api.retack.ai',
     this.apiEndpoint = '/observe/error-log/',
   });
@@ -65,7 +65,7 @@ class RetackClient {
   }) async {
     final Map<String, String> headers = <String, String>{
       'Content-Type': 'application/json',
-      'ENV-KEY': _retackConfig.apiKey
+      'ENV-KEY': _retackConfig.envKey
     };
     var body = <String, dynamic>{
       "title": error,
