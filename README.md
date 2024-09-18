@@ -7,10 +7,10 @@ Learn more: [Retack.AI](https://retack.ai)
 
 ## Getting started
 
-Start by creating an instance of `RetackClient` class by providing your `YOUR_API_KEY`.
+Start by creating an instance of `RetackClient` class by providing your `ENV_KEY`.
 
 ```dart
-final RetackConfig retackConfig = RetackConfig('YOUR_API_KEY');
+final RetackConfig retackConfig = RetackConfig('YOUR_ENV_KEY');
 final RetackClient retackClient = RetackClient(retackConfig);
 ```
 
@@ -23,8 +23,8 @@ Here's a sample example for reference:
 
 ```dart
 
-final String falseApiKey = 'YOUR_API_KEY';
-final RetackClient client = RetackClient(RetackConfig(falseApiKey));
+final String falseEnvKey = 'YOUR_ENV_KEY';
+final RetackClient client = RetackClient(RetackConfig(falseEnvKey));
 
 try {
     throw const FormatException('Format Exception');
