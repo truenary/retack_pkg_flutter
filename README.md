@@ -23,8 +23,8 @@ Here's a sample example for reference:
 
 ```dart
 
-final String falseenvKey = 'YOUR_ENV_KEY';
-final RetackClient client = RetackClient(RetackConfig(falseenvKey));
+final String falseEnvKey = 'YOUR_ENV_KEY';
+final RetackClient client = RetackClient(RetackConfig(falseEnvKey));
 
 try {
     throw const FormatException('Format Exception');
